@@ -49,25 +49,6 @@ body {
   color: #4B3520;
 }
 
-h1,
-h2,
-h3 {
-  font-family: "Patrick Hand SC", sans-serif;
-  margin: 0;
-  line-height: 1.1;
-  color: #4B3520;
-  font-weight: 400;
-}
-
-p,
-.leaflet-popup-content p {
-  font-family: "Open Sans Condensed", sans-serif;
-  font-size: 1.1rem;
-  margin-top: 0;
-  margin-bottom: .2rem;
-  font-weight: 400;
-  color: #4B3520;
-}
 
 h1 {
   font-size: 3.5rem;
@@ -82,8 +63,4 @@ h2 {
 h3 {
   font-size: 1.75rem;
   margin: 1.5rem 0 1rem;
-}
-
-#neighborhoods {
-  padding: 0 1rem 1rem 1rem;
 }
