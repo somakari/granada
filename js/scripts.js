@@ -18,7 +18,7 @@ const myBasemap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/servi
 myBasemap.addTo(myMap);
 
 // Set center of the map
-myMap.setView([37.176573, -3.599046], 12);
+myMap.setView([37.176573, -3.599046], 15);
 
 // Make an XMLHttpRequest to the JSON data
 const request = new XMLHttpRequest();
