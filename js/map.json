@@ -1,20 +1,20 @@
 {
   "cafes": [{
-      "name": "El Meson",
-      "lat": 42.002439,
-      "long": -87.672339,
-      "neighborhood": "Rogers Park",
+      "name": "La Finca",
+      "lat": 37.176273,
+      "long": -3.600161,
+      "neighborhood": "Centro-Sagrario",
       "ambiance": "4/5",
       "flavor": "5/5",
-      "comments": "Best cappuccino and croissant I've ever had. Place is rather small, so working there when it's empty is awkward."
+      "comments": "Best flat coffee I've ever had. Place is rather small, so working there when it's full is annoying."
     }, {
       "name": "Satellite Cafe",
-      "lat": 41.961898,
-      "long": -87.654172,
+      "lat": 37.180245,
+      "long": -3.600116,
       "neighborhood": "Uptown",
-      "ambiance": "1/5",
-      "flavor": "1/5",
-      "comments": "Tiny, small menu, mediocre coffee. Sister location Maiden Voyage is good."
+      "ambiance": "5/5",
+      "flavor": "5/5",
+      "comments": "Best coffee and croissant."
     },
     {
       "name": "Everybody's Coffee",
