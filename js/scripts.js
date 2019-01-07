@@ -14,6 +14,7 @@ myBasemap.addTo(myMap);
 myMap.setView([37.176539, -3.599309], 15);
 
 // Adding location markers with JSON
+/*
 const elMeson = L.marker([37.176266, -3.600165]).addTo(myMap);
 const wormhole = L.marker([37.177731, -3.601326]).addTo(myMap);
 const ipsento = L.marker([37.172966, -3.602518]).addTo(myMap);
@@ -41,5 +42,5 @@ const ipsento = L.marker([37.172966, -3.602518]).bindPopup(`
     <p><b>Flavor:</b> Great!</p>
     <p><b>Comments:</b> Great!</p>
 `).openPopup().addTo(myMap);
-
+*/
 // And so on...
