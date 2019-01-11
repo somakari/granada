@@ -10,8 +10,7 @@ const coffeeCup = L.icon({
 
 // Load the basemap
 const myBasemap = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  maxZoom: 19,
-  attribution: '© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  maxZoom: 19
 });
 
 // Add basemap to map id
