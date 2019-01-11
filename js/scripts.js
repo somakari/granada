@@ -18,7 +18,7 @@ const myBasemap = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png
 myBasemap.addTo(myMap);
 
 // Set center of the map
-myMap.setView([37.176573, -3.599046], 15);
+myMap.setView([37.176573, -3.599046], 12);
 
 // Make an XMLHttpRequest to the JSON data
 const request = new XMLHttpRequest();
