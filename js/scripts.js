@@ -3,7 +3,7 @@ const myMap = L.map('map');
 
 // Define icon
 const coffeeCup = L.icon({
-  iconUrl: 'https://somval.github.io/coffee/images/coffee.png',
+  iconUrl: 'http://somval.github.io/coffee/images/coffee.png',
   shadowUrl: '',
   iconSize: [35, 65]
 });
@@ -22,7 +22,7 @@ myMap.setView([37.176573, -3.599046], 12);
 
 // Make an XMLHttpRequest to the JSON data
 const request = new XMLHttpRequest();
-request.open('GET', 'https://somval.github.io/coffee/js/map.json', true);
+request.open('GET', 'http://somval.github.io/coffee/js/map.json', true);
 
 request.onload = function () {
   // begin accessing JSON data here
