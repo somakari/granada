@@ -1,4 +1,4 @@
-# Cafétography
+# Granada
 
 Inspired by [Tania Rascia](https://github.com/taniarascia/coffee)
 ### [View the Tutorial](https://www.taniarascia.com/real-world-examples-of-map-filter-and-reduce-in-javascript)
