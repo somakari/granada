@@ -14,28 +14,31 @@
 
 	<div id="map"></div>
 	<script>
-		var map = L.map('map').setView([37.183054, -3.602], 13);
+		//  create map object, tell it to live in 'map' div and give initial latitude, longitude, zoom values
+		var map = L.map('map').setView([37.183054, -3.602], 15);
 		
+		//  add base map tiles from OpenStreetMap and attribution info to 'map' div
 		L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=0fwfrAk2Z6gdex0uanrD', {
 			attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>',
 		}).addTo(map);
 
-		var yellowIcon = new L.Icon({
-  			iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-yellow.png',
+		// create custom icon
+		var redIcon = new L.Icon({
+  			iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png',
   			shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
   			iconSize: [25, 41],
   			iconAnchor: [12, 41],
   			popupAnchor: [1, -34],
   			shadowSize: [41, 41]
 		});
-
+		// create marker
+		var noat = L.marker([37.174324, -3.595055], {icon: redIcon}).addTo(map);
+		noat.bindPopup("<b>Noat Coffee</b><br><img src='http://joshuafrazier.info/images/maptime.gif' alt='maptime logo gif' width='350px'/><br>Speciality Coffee<br>Calle Sta. Escolástica, 7, 18009 Granada");
 		var kurva = L.marker([37.177933, -3.600]).addTo(map);
 		kurva.bindPopup("<b>La Bella Kurva</b><br>Tapas Bar<br>Calle San Jerónimo, 19, 18001 Granada");
 		var potemkin = L.marker([37.174425, -3.594593]).addTo(map);
 		potemkin.bindPopup("<b>Potemkin</b><br>Tapas Bar<br>Placeta del Hospicio Viejo, 3, 18009 Granada");
-		var noat = L.marker([37.174324, -3.595055], {icon: yellowIcon}).addTo(map);
-		noat.bindPopup("<b>Noat Coffee</b><br>Speciality Coffee<br>Calle Sta. Escolástica, 7, 18009 Granada");
+		
 	</script>
 	
 </body>
-</html>
