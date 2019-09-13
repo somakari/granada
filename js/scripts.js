@@ -1,36 +1,56 @@
-// Set the map variable
-const myMap = L.map('map');
+function initMap() {
 
-// Load the basemap
-const myBasemap = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  maxZoom: 19,
-  attribution: '© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-});
+	var broadway = {
+		info: '<strong>Chipotle on Broadway</strong><br>\
+					5224 N Broadway St<br> Chicago, IL 60640<br>\
+					<a href="https://goo.gl/maps/jKNEDz4SyyH2">Get Directions</a>',
+		lat: 41.976816,
+		long: -87.659916
+	};
 
-// Add basemap to map id
-myBasemap.addTo(myMap);
+	var belmont = {
+		info: '<strong>Chipotle on Belmont</strong><br>\
+					1025 W Belmont Ave<br> Chicago, IL 60657<br>\
+					<a href="https://goo.gl/maps/PHfsWTvgKa92">Get Directions</a>',
+		lat: 41.939670,
+		long: -87.655167
+	};
 
-// Set view of the map
-myMap.setView([41.939948, -87.650673], 12);
+	var sheridan = {
+		info: '<strong>Chipotle on Sheridan</strong><br>\r\
+					6600 N Sheridan Rd<br> Chicago, IL 60626<br>\
+					<a href="https://goo.gl/maps/QGUrqZPsYp92">Get Directions</a>',
+		lat: 42.002707,
+		long: -87.661236
+	};
 
-// Make an XMLHttpRequest to the JSON data
-const request = new XMLHttpRequest();
+	var locations = [
+      [broadway.info, broadway.lat, broadway.long, 0],
+      [belmont.info, belmont.lat, belmont.long, 1],
+      [sheridan.info, sheridan.lat, sheridan.long, 2],
+    ];
 
-request.open('GET', 'map.json', true);
-request.onload = function() {
-    // Begin accessing JSON data here
-    const data = JSON.parse(this.response);
+	var map = new google.maps.Map(document.getElementById('map'), {
+		zoom: 13,
+		center: new google.maps.LatLng(41.976816, -87.659916),
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+	});
 
-    // Print cafe markers
-    const cafes = data.cafes.map(cafe => {
-    L.marker([cafe.lat, cafe.long]).bindPopup(`
-        <h2>${cafe.name}</h2>
-        <p><b>Neighborhood:</b> ${cafe.neighborhood}</p>
-        <p><b>Ambiance:</b> ${cafe.ambiance}</p>
-        <p><b>Flavor:</b> ${cafe.flavor}</p>
-        <p><b>Comments:</b> ${cafe.comments}</p>
-    `).openPopup().addTo(myMap);
-    });
+	var infowindow = new google.maps.InfoWindow({});
+
+	var marker, i;
+
+	for (i = 0; i < locations.length; i++) {
+		marker = new google.maps.Marker({
+			position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+			map: map
+		});
+
+		google.maps.event.addListener(marker, 'click', (function (marker, i) {
+			return function () {
+				infowindow.setContent(locations[i][0]);
+				infowindow.open(map, marker);
+			}
+		})(marker, i));
+	}
 }
-
-request.send();
