@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +10,6 @@
 		#map {position: absolute; top: 0; bottom: 0; left: 0; right: 0;}
 	</style>
 </head>
-
 <body>
 
 	<div id="map"></div>
@@ -21,9 +19,11 @@
 		L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=0fwfrAk2Z6gdex0uanrD', {
 			attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>',
 		}).addTo(map);
+
 		var marker = L.marker([37.177933, -3.600]).addTo(map);
+
+		marker.bindPopup("<b>La Bella Kurva</b><br>Calle San Jerónimo, 19, 18001 Granada").openPopup();
 	</script>
 	
 </body>
-
 </html>
