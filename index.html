@@ -1,29 +1,27 @@
+
 <!DOCTYPE html>
 <html>
-
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Granada</title>
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
-	<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
-	<style type="text/css">
-		#map {position: absolute; top: 0; bottom: 0; left: 0; right: 0;}
-	</style>
-</head>
-
-<body>
-
-	<div id="map"></div>
-	<script>
-		var map = L.map('map').setView([37.183054, -3.602193], 9);
-		
-		L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=0fwfrAk2Z6gdex0uanrD', {
-			attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>',
-		}).addTo(map);
-		var marker = L.marker([37.177933, -3.600916]).addTo(map);
-	</script>
-	
-</body>
-
+  <head>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.js"></script>
+    <script src="https://cdn.maptiler.com/mapbox-gl-js/v0.53.0/mapbox-gl.js"></script>
+    <script src="https://cdn.maptiler.com/mapbox-gl-leaflet/latest/leaflet-mapbox-gl.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css" />
+    <link rel="stylesheet" href="https://cdn.maptiler.com/mapbox-gl-js/v0.53.0/mapbox-gl.css" />
+    <style>
+      #map {position: absolute; top: 0; right: 0; bottom: 0; left: 0;}
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <p><a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a></p>
+    <script>
+      var map = L.map('map').setView([37.183054, -3.602193], 11);
+      var gl = L.mapboxGL({
+        attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
+        accessToken: 'not-needed',
+        style: 'https://api.maptiler.com/maps/70532ad6-3945-41c1-b1da-68d218e9967b/style.json?key=0fwfrAk2Z6gdex0uanrD'
+      }).addTo(map);
+    </script>
+  </body>
 </html>
