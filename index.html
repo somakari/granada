@@ -20,9 +20,9 @@
 			attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>',
 		}).addTo(map);
 
-		var marker = L.marker([37.177933, -3.600]).addTo(map);
-
-		marker.bindPopup("<b>La Bella Kurva</b><br>Calle San Jerónimo, 19, 18001 Granada");
+		var kurva = L.marker([37.177933, -3.600]).bindPopup("<b>La Bella Kurva</b><br>Tapas Bar<br>Calle San Jerónimo, 19, 18001 Granada"),
+			potemkin = L.marker([37.177933, -3.600]).bindPopup("<b>La Bella Kurva</b><br>Tapas Bar<br>Calle San Jerónimo, 19, 18001 Granada"),
+			noat = L.marker([37.177933, -3.600]).bindPopup("<b>La Bella Kurva</b><br>Tapas Bar<br>Calle San Jerónimo, 19, 18001 Granada");
 	</script>
 	
 </body>
