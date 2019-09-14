@@ -15,7 +15,7 @@
 	<div id="map"></div>
 	<script>
 		//  create map object, tell it to live in 'map' div and give initial latitude, longitude, zoom values
-		var map = L.map('map').setView([37.183054, -3.602], 15);
+		var map = L.map('map').setView([37.183054, -3.602], 14);
 		
 		//  add base map tiles from OpenStreetMap and attribution info to 'map' div
 		L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=0fwfrAk2Z6gdex0uanrD', {
@@ -33,11 +33,11 @@
 		});
 		// create marker
 		var noat = L.marker([37.174324, -3.595055], {icon: redIcon}).addTo(map);
-		noat.bindPopup("<h3>Noat Coffee</h3><br><img src='https://somakari.com/granada/img/noat-coffee.jpg' alt='Noat Coffee' width='250px'/><br>Speciality Coffee<br>Calle Sta. Escolástica, 7, 18009 Granada");
-		var kurva = L.marker([37.177933, -3.600]).addTo(map);
-		kurva.bindPopup("<h3>Bella Kurva</h3><br><img src='https://somakari.com/granada/img/bella-kurva.jpg' alt='Bella Kurva' width='250px'/><br>Tapas Bar<br>Calle San Jerónimo, 19, 18001 Granada");
+		noat.bindPopup("<img src='https://somakari.com/granada/img/noat-coffee.jpg' alt='Noat Coffee' width='150px'/><h3>Noat Coffee</h3>Speciality Coffee<br>Calle Sta. Escolástica, 7, 18009 Granada");
+		var kurva = L.marker([37.177950, -3.600970]).addTo(map);
+		kurva.bindPopup("<img src='https://somakari.com/granada/img/bella-kurva.jpg' alt='Bella Kurva' width='150px'/><h3>Bella Kurva</h3>Tapas Bar<br>Calle San Jerónimo, 19, 18001 Granada");
 		var potemkin = L.marker([37.174425, -3.594593]).addTo(map);
-		potemkin.bindPopup("<h3>Potemkin</h3><br><img src='https://somakari.com/granada/img/potemkin.jpg' alt='Potemkin' width='250px'/><br>Tapas Bar<br>Placeta del Hospicio Viejo, 3, 18009 Granada");
+		potemkin.bindPopup("<img src='https://somakari.com/granada/img/potemkin.jpg' alt='Potemkin' width='250px'/><h3>Potemkin</h3>Tapas Bar<br>Placeta del Hospicio Viejo, 3, 18009 Granada");
 		
 	</script>
 	
