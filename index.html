@@ -31,8 +31,18 @@
   			popupAnchor: [1, -34],
   			shadowSize: [41, 41]
 		});
+		
+		// create custom icon cafe
+		var cafeIcon = L.icon({
+    			iconUrl: 'cafe.png',
+			iconSize:     [25, 41], // size of the icon
+    			iconAnchor:   [12, 41], // point of the icon which will correspond to marker's location
+   			popupAnchor:  [1, -34] // point from which the popup should open relative to the iconAnchor
+});
+		
 		// create marker
-		var noat = L.marker([37.174324, -3.595055], {icon: redIcon}).addTo(map);
+		//var noat = L.marker([37.174324, -3.595055], {icon: redIcon}).addTo(map);
+		var noat = L.marker([37.174324, -3.595055], {icon: cafeIcon}).addTo(map);
 		noat.bindPopup("<img src='https://somakari.github.io/granada/img/noat-coffee.jpg' alt='Noat Coffee' width='200px'/><h3>Noat Coffee</h3>Speciality Coffee<br>Calle Sta. Escolástica, 7, 18009 Granada");
 		var kurva = L.marker([37.177950, -3.600970]).addTo(map);
 		kurva.bindPopup("<img src='https://somakari.github.io/granada/img/bella-kurva.jpg' alt='Bella Kurva' width='200px'/><h3>Bella Kurva</h3>Tapas Bar<br>Calle San Jerónimo, 19, 18001 Granada");
